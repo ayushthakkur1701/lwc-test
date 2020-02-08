@@ -39,12 +39,11 @@ img {
 
 .slds-form-element {
     position: relative;
-    width: fit-content;
 }
 
 .slds-card {
     position: absolute;
-    right:40%;
+    right: 40%;
     top: 30%;
     left: auto;
     padding: 30px;
