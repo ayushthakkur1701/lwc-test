@@ -26,4 +26,4 @@ node_modules
 Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
-$RECYCLE.BIN/
+$RECYCLE.BIN/node_modules

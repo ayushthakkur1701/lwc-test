@@ -1,6 +1,6 @@
 /* eslint-disable @lwc/lwc/no-document-query */
 /* eslint-disable no-alert */
-import { LightningElement, track, } from 'lwc';
+import { LightningElement, track } from 'lwc';
 
 export default class App extends LightningElement {
     @track showDash = false;
