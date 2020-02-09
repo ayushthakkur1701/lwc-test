@@ -27,7 +27,7 @@ export default class App extends LightningElement {
         //this.showDash = false;
         //this.showLogin = false;
         //this.chlidComponentHeading = 'Dash Board';
-        let mailformat = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/;
+        let mailformat = /^(([^<>()[]\.,;:s@"]+(.[^<>()[]\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
         let paswd = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
         if (!mailformat.test(this.loginEmail)) {
             this.errorText = 'You have entered an invalid email address!';
@@ -41,6 +41,5 @@ export default class App extends LightningElement {
             this.showDash = true;
             this.chlidComponentHeading = 'Dash Board';
         }
-
     }
 }
