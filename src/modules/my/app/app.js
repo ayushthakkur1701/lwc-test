@@ -12,24 +12,22 @@ export default class App extends LightningElement {
     errorText = '';
     showNextPage = false;
     handleName(event) {
-        
         this.loginEmail = event.target.value;
     }
 
     handlePassword(event) {
-        
         this.loginPassword = event.target.value;
     }
 
-    removeToast(){
+    removeToast() {
         this.showToast = false;
     }
 
     handleSubmit() {
-        //this.showDash = true;
+        //this.showDash = false;
         //this.showLogin = false;
         //this.chlidComponentHeading = 'Dash Board';
-        let mailformat = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/; // /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let mailformat = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/;
         let paswd = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
         if (!mailformat.test(this.loginEmail)) {
             this.errorText = 'You have entered an invalid email address!';
@@ -40,45 +38,9 @@ export default class App extends LightningElement {
             this.showToast = !this.showToast;
         } else {
             this.showLogin = false;
+            this.showDash = true;
             this.chlidComponentHeading = 'Dash Board';
         }
 
-        /*
-        if (
-            (this.loginEmail === '' || this.loginEmail == null) &&
-            (this.loginPassword === '' || this.loginPassword == null)
-        ) {
-            this.errorText = 'Please enter Email and Password.';
-            this.showToast = !this.showToast;
-            
-
-            // validateEmptyCheck(checkEmptyEmail,checkEmptyPassword);
-        } else if (
-            (this.loginEmail === '' || this.loginEmail == null) &&
-            (this.loginPassword !== '' || this.loginPassword != null)
-        ) {
-
-            this.errorText = 'Please enter Email.';
-            this.showToast = !this.showToast;
-            //alert('');
-        } else if (
-            (this.name !== '' || this.name != null) &&
-            (this.password === '' || this.password == null)
-        ) {
-            this.errorText = 'Please enter Password.';
-            this.showToast = !this.showToast;
-            //alert('Please enter Password.');
-        } else {
-            this.showLogin = false;
-            this.chlidComponentHeading = 'Dash Board';
-        }*/
-
-        //alert(loginEmail+''+loginPassword);
-
-        //loginTempId = this.template.querySelector('div').chidNodes;
-        //customElements.define('my-dash-board', buildCustomElementConstructor(DashBoard));
-        //console.log(loginTempId);
-
-        // loginTempId.style.display = "none";
     }
 }

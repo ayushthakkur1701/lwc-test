@@ -11,6 +11,25 @@
                 min-height: 65px;
                 padding-top: 50px;
             }
+            @media only screen and (max-width: 800px) {
+                /* For tablets: */
+                .main {
+                    width: 80%;
+                    padding: 0;
+                }
+                .right {
+                    width: 100%;
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                /* For mobile phones: */
+                .menu,
+                .main,
+                .right {
+                    width: 100%;
+                }
+            }
         </style>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="shortcut icon" href="/resources/favicon.ico" />
@@ -26,6 +45,6 @@
         />
     </head>
     <body>
-        <my-app></my-app>
+        <my-app class="main"></my-app>
     </body>
 </html>

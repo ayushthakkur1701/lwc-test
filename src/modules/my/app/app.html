@@ -4,127 +4,135 @@
             <my-toast-error error-msg={errorText}></my-toast-error>
         </template>
         <div>
-            <section
-                role="dialog"
-                tabindex="-1"
-                class="slds-modal slds-fade-in-open slds-modal_small"
-                aria-labelledby="welcome-mat-100-label"
-                aria-describedby="welcome-mat-100-content"
-                aria-modal="true"
-            >
-                <div class="slds-modal__container">
-                    <div
-                        class="slds-modal__content"
-                        id="welcome-mat-100-content"
-                    >
-                        <div class="slds-welcome-mat">
-                            <div class="slds-welcome-mat__content slds-grid">
+            <template if:true={showLogin} data-id="loginTemplate">
+                <section
+                    role="dialog"
+                    tabindex="-1"
+                    class="slds-modal slds-fade-in-open slds-modal_small"
+                    aria-labelledby="welcome-mat-100-label"
+                    aria-describedby="welcome-mat-100-content"
+                    aria-modal="true"
+                >
+                    <div class="slds-modal__container">
+                        <div
+                            class="slds-modal__content"
+                            id="welcome-mat-100-content"
+                        >
+                            <div class="slds-welcome-mat">
                                 <div
-                                    class=" slds-welcome-mat__info slds-size_1-of-2"
+                                    class="slds-welcome-mat__content slds-grid"
                                 >
-                                    <div class="slds-welcome-mat__info-content">
-                                        <h2
-                                            class="slds-welcome-mat__info-title"
-                                            id="welcome-mat-100-label"
-                                        >
-                                            The Lightning Experience is here!
-                                        </h2>
+                                    <div
+                                        class=" slds-welcome-mat__info slds-size_1-of-2"
+                                    >
                                         <div
-                                            class="slds-welcome-mat__info-description slds-text-longform"
+                                            class="slds-welcome-mat__info-content"
                                         >
-                                            <p>
-                                                Welcome to Salesforce Garage,
-                                                the modern, beautiful user
-                                                experience from Salesforce. With
-                                                a sales-and service-centric
-                                                mindset, we focused on
-                                                reinventing the desktop
-                                                environment to better support
-                                                your business processes.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="slds-welcome-mat__info-progress"
-                                        >
-                                            <p>
-                                                <strong
-                                                    >0/5 units completed</strong
-                                                >
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="slds-progress-bar slds-progress-bar_circular"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                            aria-valuenow="0"
-                                            role="progressbar"
-                                        >
-                                            <span
-                                                class="slds-progress-bar__value"
-                                                style="width:0%"
+                                            <h2
+                                                class="slds-welcome-mat__info-title"
+                                                id="welcome-mat-100-label"
+                                            >
+                                                The Lightning Experience is
+                                                here!
+                                            </h2>
+                                            <div
+                                                class="slds-welcome-mat__info-description slds-text-longform"
+                                            >
+                                                <p>
+                                                    Welcome to Salesforce
+                                                    Garage, the modern,
+                                                    beautiful user experience
+                                                    from Salesforce. With a
+                                                    sales-and service-centric
+                                                    mindset, we focused on
+                                                    reinventing the desktop
+                                                    environment to better
+                                                    support your business
+                                                    processes.
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="slds-welcome-mat__info-progress"
+                                            >
+                                                <p>
+                                                    <strong
+                                                        >0/5 units
+                                                        completed</strong
+                                                    >
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="slds-progress-bar slds-progress-bar_circular"
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                                aria-valuenow="0"
+                                                role="progressbar"
                                             >
                                                 <span
-                                                    class="slds-assistive-text"
-                                                    >Progress: 0%</span
+                                                    class="slds-progress-bar__value"
+                                                    style="width:0%"
                                                 >
-                                            </span>
+                                                    <span
+                                                        class="slds-assistive-text"
+                                                        >Progress: 0%</span
+                                                    >
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <ul
-                                    class="slds-welcome-mat__tiles slds-size_1-of-2"
-                                >
-                                    <li>
-                                        <div class="slds-page-header">
-                                            <div class="slds-page-header__row">
+                                    <ul
+                                        class="slds-welcome-mat__tiles slds-size_1-of-2"
+                                    >
+                                        <li>
+                                            <div class="slds-page-header">
                                                 <div
-                                                    class="slds-page-header__col-title"
+                                                    class="slds-page-header__row"
                                                 >
-                                                    <div class="slds-media">
-                                                        <div
-                                                            class="slds-media__figure"
-                                                        >
-                                                            <span
-                                                                class="slds-icon_container slds-icon-standard-opportunity"
-                                                                title="opportunity"
-                                                            >
-                                                                <img
-                                                                    src="resources\SLDS\icons\action\user_60.png"
-                                                                />
-
-                                                                <span
-                                                                    class="slds-assistive-text"
-                                                                    >opportunity</span
-                                                                >
-                                                            </span>
-                                                        </div>
-                                                        <div
-                                                            class="slds-media__body"
-                                                        >
+                                                    <div
+                                                        class="slds-page-header__col-title"
+                                                    >
+                                                        <div class="slds-media">
                                                             <div
-                                                                class="slds-page-header__name"
+                                                                class="slds-media__figure"
+                                                            >
+                                                                <span
+                                                                    class="slds-icon_container slds-icon-standard-opportunity"
+                                                                    title="opportunity"
+                                                                >
+                                                                    <img
+                                                                        src="resources\icons\action\user_60.png"
+                                                                    />
+
+                                                                    <span
+                                                                        class="slds-assistive-text"
+                                                                        >opportunity</span
+                                                                    >
+                                                                </span>
+                                                            </div>
+                                                            <div
+                                                                class="slds-media__body"
                                                             >
                                                                 <div
-                                                                    class="slds-page-header__name-title"
+                                                                    class="slds-page-header__name"
                                                                 >
-                                                                    <h1>
-                                                                        <span
-                                                                            class="slds-page-header__title slds-truncate"
-                                                                            title="Login"
-                                                                            >Login</span
-                                                                        >
-                                                                    </h1>
+                                                                    <div
+                                                                        class="slds-page-header__name-title"
+                                                                    >
+                                                                        <h1>
+                                                                            <span
+                                                                                class="slds-page-header__title slds-truncate"
+                                                                                title="Login"
+                                                                                >Login</span
+                                                                            >
+                                                                        </h1>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <template
-                                            if:true={showLogin}
-                                            data-id="loginTemplate"
-                                        >
+
                                             <div
                                                 class=" slds-form-element slds-p-left_small slds-p-right_small slds-p-top_large"
                                             >
@@ -187,23 +195,19 @@
                                                     Submit
                                                 </button>
                                             </footer>
-                                        </template>
-                                        <template if:false={showLogin}>
-                                            <h1>
-                                                <my-dash-board
-                                                    component-heading={chlidComponentHeading}
-                                                >
-                                                </my-dash-board>
-                                            </h1>
-                                        </template>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <div class="slds-backdrop slds-backdrop_open"></div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
         </div>
+        <template if:true={showDash}>
+            <my-dash-board component-heading={chlidComponentHeading}>
+            </my-dash-board>
+        </template>
     </div>
 </template>
