@@ -12,21 +12,25 @@ export default class App extends LightningElement {
     errorText = '';
     showNextPage = false;
     handleName(event) {
-        this.showToast = false;
+        
         this.loginEmail = event.target.value;
     }
 
     handlePassword(event) {
-        this.showToast = false;
+        
         this.loginPassword = event.target.value;
+    }
+
+    removeToast(){
+        this.showToast = false;
     }
 
     handleSubmit() {
         //this.showDash = true;
         //this.showLogin = false;
         //this.chlidComponentHeading = 'Dash Board';
-        let mailformat =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;// /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        let paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+        let mailformat = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/; // /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let paswd = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
         if (!mailformat.test(this.loginEmail)) {
             this.errorText = 'You have entered an invalid email address!';
             this.showToast = !this.showToast;

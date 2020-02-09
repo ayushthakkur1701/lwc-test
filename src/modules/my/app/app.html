@@ -138,12 +138,13 @@
                                                     class="slds-form-element__control "
                                                 >
                                                     <input
-                                                        type="text"
+                                                        type="email"
                                                         id="login_email"
                                                         placeholder="type here..."
                                                         aria-labelledby="inline-text-email"
                                                         class="slds-input"
                                                         onchange={handleName}
+                                                        oninput={removeToast}
                                                     />
                                                     <div
                                                         class="slds-form-element__help"
@@ -163,11 +164,12 @@
                                                     class="slds-form-element__control"
                                                 >
                                                     <input
-                                                        type="text"
+                                                        type="password"
                                                         id="login_password"
                                                         placeholder="type here..."
                                                         aria-labelledby="inline-text-password"
                                                         class="slds-input"
+                                                        oninput={removeToast}
                                                         onchange={handlePassword}
                                                     />
                                                 </div>
