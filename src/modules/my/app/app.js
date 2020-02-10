@@ -3,8 +3,8 @@
 import { LightningElement, track } from 'lwc';
 
 export default class App extends LightningElement {
-    @track showDash = false;
-    @track showLogin = true;
+    @track showDash = true;
+    @track showLogin = false;
     @track chlidComponentHeading = '';
     loginEmail = '';
     loginPassword = '';
