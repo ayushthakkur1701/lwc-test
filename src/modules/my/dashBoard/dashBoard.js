@@ -22,12 +22,22 @@ export default class DashBoard extends LightningElement {
 
     constructor() {
         super();
-        let root = this.template.querySelector('.tabList').createShadowRoot();
-        let listElement = document.createElement('li');
-        listElement.className += 'slds-tabs_default__item slds-is-active';
+        
+    }
+
+    renderedCallback(){
+        //alert(JSON.stringify(this.template.querySelectorAll('.tabList')));
+        console.log(this.template.querySelectorAll('.slds-tabs_default__nav'));
+        /*let root = this.template.querySelector('.tabList').createShadowRoot();
+        
+        let listElement = document.createElement('LI');
+        
+        //listElement.setAttribute('class','slds-tabs_default__item slds-is-active');
         this.tabs.forEach(element => {
-            listElement.innerHTML += element.Title;
+            var textnode = document.createTextNode(element.Title);         // Create a text node
+            listElement.appendChild(textnode);
         });
-        root.appendChild(listElement);
+        root.appendChild(listElement);*/
+
     }
 }
