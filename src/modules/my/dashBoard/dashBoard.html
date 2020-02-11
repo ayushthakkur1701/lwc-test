@@ -398,12 +398,12 @@
     <div class="slds-tabs_default slds-tabs_large">
         <ul class="slds-tabs_default__nav" role="tablist">
          
-            <template for:each={tabs} for:item="tab">
+            <template id="tabsId">
                 
-                <li key={tab.Id}  title={tab.Title} role="presentation" class="slds-tabs_default__item slds-is-active">
+                <!--<li key={tab.Id}  title={tab.Title} role="presentation" class="tabList">
                      
                     <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id={tab.Title}>{tab.Title}</a>
-                </li>
+                </li>-->
             </template>
          
         </ul>
